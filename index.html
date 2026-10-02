@@ -1,0 +1,462 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CurricuForge — AI-Powered Personalized Learning</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS (via CDN for utility classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="relative">
+
+  <!-- Background effects -->
+  <div class="mesh-bg" aria-hidden="true">
+    <div class="mesh-gradient mesh-1"></div>
+    <div class="mesh-gradient mesh-2"></div>
+    <div class="mesh-gradient mesh-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="content-wrapper">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/60 backdrop-blur-2xl border-b border-[var(--border)]">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3" aria-label="CurricuForge Home">
+          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[var(--secondary)] flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold tracking-tight">CurricuForge</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-10">
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#demo" class="nav-link">Try Demo</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="btn-secondary py-3 px-5 text-sm hidden sm:block">Log In</button>
+          <button class="btn-primary py-3 px-5 text-sm">Start Free</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="reveal float-badge inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--card)] mb-8">
+              <div class="relative w-2 h-2">
+                <div class="absolute inset-0 rounded-full bg-[var(--accent)]"></div>
+                <div class="pulse-ring"></div>
+              </div>
+              <span class="text-sm text-[var(--fg-soft)]">AI-powered personalized learning paths</span>
+            </div>
+            
+            <h1 class="reveal reveal-delay-1 text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-8">
+              Your personal AI
+              <span class="block mt-2 bg-gradient-to-r from-[var(--accent)] to-[var(--secondary)] bg-clip-text text-transparent">learning architect</span>
+            </h1>
+            
+            <p class="reveal reveal-delay-2 text-lg text-[var(--fg-soft)] mb-10 max-w-xl leading-relaxed">
+              Analyze your skills, identify gaps, and get a customized learning path with weekly plans, topics, and assessments — all generated automatically by AI.
+            </p>
+            
+            <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-12">
+              <button class="btn-primary flex items-center gap-2" onclick="scrollToDemo()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                Analyze My Skills
+              </button>
+              <button class="btn-secondary flex items-center gap-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="10 8 16 12 10 16 10 8"/>
+                </svg>
+                Watch Demo
+              </button>
+            </div>
+
+            <div class="reveal reveal-delay-4 flex items-center gap-6">
+              <div class="flex -space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-2 border-[var(--bg)] flex items-center justify-center text-xs font-bold">JD</div>
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-[var(--bg)] flex items-center justify-center text-xs font-bold">MK</div>
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-2 border-[var(--bg)] flex items-center justify-center text-xs font-bold">AS</div>
+                <div class="w-10 h-10 rounded-full bg-[var(--card)] border-2 border-[var(--border)] flex items-center justify-center text-xs font-medium text-[var(--muted)]">+5k</div>
+              </div>
+              <div class="text-sm text-[var(--fg-soft)]">
+                <span class="text-[var(--fg)] font-semibold">5,000+</span> learners this month
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Gap Analyzer Demo -->
+          <div id="demo" class="reveal reveal-delay-2">
+            <div class="analyzer-panel">
+              <div class="analyzer-header">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 rounded-full bg-[var(--secondary)]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[var(--warning)]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[var(--success)]"></div>
+                </div>
+                <span class="text-xs text-[var(--muted)] font-medium uppercase tracking-wider">Skill Gap Analyzer</span>
+              </div>
+              <div class="analyzer-content">
+                <div class="flex gap-2 mb-6">
+                  <button class="tab-btn active" data-tab="skills" onclick="switchTab('skills')">Skills</button>
+                  <button class="tab-btn" data-tab="gaps" onclick="switchTab('gaps')">Gaps</button>
+                  <button class="tab-btn" data-tab="plan" onclick="switchTab('plan')">Plan</button>
+                </div>
+
+                <!-- Skills Tab -->
+                <div id="tab-skills" class="tab-content">
+                  <div class="mb-5">
+                    <label class="block text-sm font-medium text-[var(--fg-soft)] mb-3">Select your current skills</label>
+                    <div class="flex flex-wrap gap-2" id="skillTags">
+                      <span class="skill-tag selected" onclick="toggleSkill(this)">Python</span>
+                      <span class="skill-tag selected" onclick="toggleSkill(this)">SQL</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">Machine Learning</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">Deep Learning</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">Data Visualization</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">Statistics</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">TensorFlow</span>
+                      <span class="skill-tag" onclick="toggleSkill(this)">NLP</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-5">
+                    <label class="block text-sm font-medium text-[var(--fg-soft)] mb-2">Your learning goal</label>
+                    <select class="input-field" id="goalSelect">
+                      <option value="ml-engineer">Become a Machine Learning Engineer</option>
+                      <option value="data-scientist">Transition to Data Science</option>
+                      <option value="ai-researcher">AI Research Scientist</option>
+                      <option value="full-stack-ml">Full-Stack ML Developer</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-5">
+                    <label class="block text-sm font-medium text-[var(--fg-soft)] mb-2">Available hours per week</label>
+                    <input type="range" id="hoursSlider" min="5" max="40" value="15" class="w-full accent-[var(--accent)]" oninput="updateHours(this.value)">
+                    <div class="flex justify-between text-xs text-[var(--muted)] mt-1">
+                      <span>5 hrs</span>
+                      <span id="hoursValue" class="text-[var(--accent)] font-semibold">15 hrs/week</span>
+                      <span>40 hrs</span>
+                    </div>
+                  </div>
+
+                  <button class="btn-primary w-full" onclick="analyzeSkills()">
+                    <span class="flex items-center justify-center gap-2">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                      Analyze Skill Gaps
+                    </span>
+                  </button>
+                </div>
+
+                <!-- Gaps Tab -->
+                <div id="tab-gaps" class="tab-content hidden">
+                  <div class="text-center py-8">
+                    <div class="loader mx-auto mb-4"></div>
+                    <p class="text-[var(--fg-soft)]">Analyzing your skill profile...</p>
+                  </div>
+                </div>
+
+                <!-- Plan Tab -->
+                <div id="tab-plan" class="tab-content hidden">
+                  <div id="planOutput"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="reveal text-4xl sm:text-5xl font-extrabold mb-4">How CurricuForge Works</h2>
+          <p class="reveal reveal-delay-1 text-lg text-[var(--fg-soft)] max-w-2xl mx-auto">Five intelligent steps to your personalized learning journey</p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-6">
+          <div class="reveal feature-card text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent)] to-teal-600 flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-[var(--bg)]">1</div>
+            <h3 class="font-bold mb-2 text-lg">Skill Analysis</h3>
+            <p class="text-sm text-[var(--fg-soft)]">AI evaluates your current skill level across relevant domains</p>
+          </div>
+
+          <div class="reveal reveal-delay-1 feature-card text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent)] to-teal-600 flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-[var(--bg)]">2</div>
+            <h3 class="font-bold mb-2 text-lg">Gap Detection</h3>
+            <p class="text-sm text-[var(--fg-soft)]">Identifies precise skill gaps between you and your goal</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 feature-card text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--secondary)] to-pink-600 flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-[var(--bg)]">3</div>
+            <h3 class="font-bold mb-2 text-lg">Goal Mapping</h3>
+            <p class="text-sm text-[var(--fg-soft)]">Aligns learning objectives with career aspirations</p>
+          </div>
+
+          <div class="reveal reveal-delay-3 feature-card text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--secondary)] to-pink-600 flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-[var(--bg)]">4</div>
+            <h3 class="font-bold mb-2 text-lg">Syllabus Creation</h3>
+            <p class="text-sm text-[var(--fg-soft)]">Generates custom curriculum with topics and resources</p>
+          </div>
+
+          <div class="reveal reveal-delay-4 feature-card text-center">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto mb-5 text-2xl font-bold text-white">5</div>
+            <h3 class="font-bold mb-2 text-lg">Weekly Plans</h3>
+            <p class="text-sm text-[var(--fg-soft)]">Auto-generates weekly plans with assessments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-6 bg-[var(--bg-elevated)]/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="reveal text-4xl sm:text-5xl font-extrabold mb-4">Intelligent Learning Features</h2>
+          <p class="reveal reveal-delay-1 text-lg text-[var(--fg-soft)] max-w-2xl mx-auto">Everything you need for a personalized, efficient learning experience</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--accent-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Adaptive Assessments</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">Dynamic quizzes that adjust difficulty based on your performance and learning pace.</p>
+          </div>
+
+          <div class="reveal reveal-delay-1 feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--secondary-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Curated Resources</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">AI-selects the best courses, articles, videos, and projects for each topic.</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--accent-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Time Optimization</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">Plans fit your schedule — learn efficiently with focused, high-impact sessions.</p>
+          </div>
+
+          <div class="reveal feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--secondary-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Progress Analytics</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">Visual dashboards showing skill growth, time invested, and milestone completion.</p>
+          </div>
+
+          <div class="reveal reveal-delay-1 feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--accent-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Smart Reminders</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">Intelligent notifications that adapt to your study patterns and keep you on track.</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 feature-card">
+            <div class="w-12 h-12 rounded-xl bg-[var(--secondary-glow)] flex items-center justify-center mb-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Peer Matching</h3>
+            <p class="text-[var(--fg-soft)] text-sm leading-relaxed">Connect with learners on similar paths for study groups and project collaboration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="reveal">
+            <div class="stat-value" data-count="94">0</div>
+            <div class="text-[var(--fg-soft)] mt-2">Skill Gap Accuracy %</div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="stat-value" data-count="3">0</div>
+            <div class="text-[var(--fg-soft)] mt-2">Weeks to First Milestone</div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="stat-value" data-count="87">0</div>
+            <div class="text-[var(--fg-soft)] mt-2">Completion Rate %</div>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <div class="stat-value" data-count="50">0</div>
+            <div class="text-[var(--fg-soft)] mt-2">Learning Paths</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 px-6 bg-[var(--bg-elevated)]/50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="reveal text-4xl sm:text-5xl font-extrabold mb-4">Simple Pricing</h2>
+          <p class="reveal reveal-delay-1 text-lg text-[var(--fg-soft)]">Start free, upgrade when you're ready</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="reveal feature-card">
+            <div class="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">Free</div>
+            <div class="text-4xl font-extrabold mb-1">$0</div>
+            <div class="text-[var(--muted)] text-sm mb-6">Forever</div>
+            <ul class="space-y-3 mb-8 text-sm">
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                1 learning path
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Basic skill analysis
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Weekly plan generation
+              </li>
+            </ul>
+            <button class="btn-secondary w-full text-sm">Get Started</button>
+          </div>
+
+          <div class="reveal reveal-delay-1 feature-card relative border-[var(--accent)]">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--accent)] to-[var(--secondary)] text-xs font-bold px-4 py-1 rounded-full text-[var(--bg)]">Popular</div>
+            <div class="text-xs font-semibold text-[var(--accent)] uppercase tracking-wider mb-3">Pro</div>
+            <div class="text-4xl font-extrabold mb-1">$19<span class="text-lg font-normal text-[var(--muted)]">/mo</span></div>
+            <div class="text-[var(--muted)] text-sm mb-6">Billed monthly</div>
+            <ul class="space-y-3 mb-8 text-sm">
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited learning paths
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Advanced skill analytics
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                AI tutor chat
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Progress certificates
+              </li>
+            </ul>
+            <button class="btn-primary w-full text-sm">Start 7-Day Trial</button>
+          </div>
+
+          <div class="reveal reveal-delay-2 feature-card">
+            <div class="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">Team</div>
+            <div class="text-4xl font-extrabold mb-1">Custom</div>
+            <div class="text-[var(--muted)] text-sm mb-6">Contact us</div>
+            <ul class="space-y-3 mb-8 text-sm">
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Team dashboards
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Custom skill frameworks
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Admin controls
+              </li>
+              <li class="flex items-center gap-2 text-[var(--fg-soft)]">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Priority support
+              </li>
+            </ul>
+            <button class="btn-secondary w-full text-sm">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="reveal feature-card p-12">
+          <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to accelerate your learning?</h2>
+          <p class="text-[var(--fg-soft)] mb-8 max-w-xl mx-auto">Join thousands of learners who've transformed their careers with AI-powered personalized learning paths.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button class="btn-primary">Start Your Free Analysis</button>
+            <button class="btn-secondary">Schedule a Demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-[var(--border)]">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-between items-center gap-6">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--secondary)] flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="font-bold">CurricuForge</span>
+          </div>
+          <div class="flex gap-6 text-sm text-[var(--muted)]">
+            <a href="#" class="hover:text-[var(--fg)] transition-colors">Privacy</a>
+            <a href="#" class="hover:text-[var(--fg)] transition-colors">Terms</a>
+            <a href="#" class="hover:text-[var(--fg)] transition-colors">Contact</a>
+          </div>
+          <p class="text-sm text-[var(--muted)]">2025 CurricuForge. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
